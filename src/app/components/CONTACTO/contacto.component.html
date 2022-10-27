@@ -1,0 +1,29 @@
+<section class="fondo1">
+		<form class="col-lg-12 fondo-interior">
+			<h1 class="text-center contactanos">CONTACTE CON NOSOTROS !</h1>	
+			<p>
+				<label>Correo electrónico:</label>
+				<input type="email" class="form-control" id="inputPassword4">
+			</p>
+	
+			<p>
+				<label for="inputAddress" class="form-label">Número de teléfono:</label>
+				<input type="text" class="form-control" id="inputAddress">
+	
+			</p>
+	
+			<p>
+				<label for="inputZip" class="form-label">Asunto:</label>
+				<input type="text" class="form-control" id="inputZip">
+	
+			</p>
+	
+			<p>
+				<label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+				<textarea class="form-control" id="exampleFormControlTextarea1"
+				rows="4"></textarea>
+			</p>
+	
+			<input type="submit" value="Enviar" class="btn btn-success btn-enviar" [disabled]="!registerForm.form.valid" />
+		</form>
+</section>

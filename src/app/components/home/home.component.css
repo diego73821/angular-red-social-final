@@ -1,0 +1,27 @@
+.fondo1{
+    background-image: url(https://previews.123rf.com/images/photoraidz/photoraidz1312/photoraidz131200122/24204455-dise%C3%B1o-de-la-plantilla-con-la-red-social-iconos-de-fondo.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.fondo-interior{
+    background-color: rgb(200, 152, 107);
+	width: 80%;
+	margin-left: 10%;
+}
+
+.subtitulo1 {
+	font-family: fantasy;
+	margin-top: 5%;
+}
+
+.img-publicaciones {
+	margin-left: 25%;
+	margin-bottom: 5%;
+	width: 50%;
+}
+
+.titulo{
+	font-family: fantasy;
+	font-size: 50px;
+}

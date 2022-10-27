@@ -1,0 +1,46 @@
+<div class="row fondo-login">
+	<!-- <h1 class="h1-strong text-center">{{title}}</h1> -->
+	<div class="col-md-6">
+		<div class="alert alert-success" *ngIf="status == 'success'">
+			Te has identificado correctamente, bienvenido!!
+		</div>
+
+		<div class="alert alert-danger" *ngIf="status == 'error'">
+			No te has podido identificar correctamente!!
+		</div>
+
+		<img class="logo-d3" src="https://raw.githubusercontent.com/d3/d3-logo/master/d3.png" alt="">
+		<div class="formulario-login">
+			<form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+				<p>
+					<label>Correo electrónico</label>
+					<input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control"
+						required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+					<span *ngIf="!email.valid && email.touched" class="text-danger">
+						El email no es correcto
+					</span>
+				</p>
+
+				<p>
+					<label>Contraseña</label>
+					<input type="password" name="password" #password="ngModel" [(ngModel)]="user.password"
+						class="form-control" required />
+					<span *ngIf="!password.valid && password.touched" class="text-danger">
+						La contraseña es obligatoria
+					</span>
+				</p>
+
+				<input type="submit" value="Entrar" class="btn btn-success btn-entrar"
+					[disabled]="!loginForm.form.valid" />
+			</form>
+		</div>
+	<!-- <div class="">
+	<p class="bg-danger">dsadad</p>
+	<p class="bg-danger">dsadad</p>
+	</div> -->
+	</div>
+	<div class="col-md-6">
+		<h1 class="titulo-login">¿Aun no estas registrado?</h1>
+		<button class="btn btn-success btn-registro">REGISTRATE AQUI!</button>
+	</div>
+</div>
